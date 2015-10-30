@@ -47,7 +47,7 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
             self.lists = self.lists.sorted("name")
         }
         else{
-            self.lists = self.lists.sorted("sortedAt", ascending: false)
+            self.lists = self.lists.sorted("createdAt", ascending: false)
         }
         self.taskListsTableView.reloadData()
     }
