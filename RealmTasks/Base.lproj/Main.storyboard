@@ -34,40 +34,28 @@
                                     </connections>
                                 </segmentedControl>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="listCell" rowHeight="69" id="FRG-bM-iL8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="listCell" textLabel="VBb-ui-eug" detailTextLabel="ikd-hs-iuu" rowHeight="69" style="IBUITableViewCellStyleValue1" id="FRG-bM-iL8">
                                         <rect key="frame" x="0.0" y="122" width="600" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FRG-bM-iL8" id="Amf-S7-jRH">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwG-lh-fCf">
-                                                    <rect key="frame" x="29" y="11" width="42" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="42" id="O4B-Uf-xtb"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VBb-ui-eug">
+                                                    <rect key="frame" x="15" y="24" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3w-5y-Llv">
-                                                    <rect key="frame" x="489" y="8" width="56" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="56" id="A0m-Cu-Lz2"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ikd-hs-iuu">
+                                                    <rect key="frame" x="523" y="24" width="42" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="d3w-5y-Llv" firstAttribute="top" secondItem="Amf-S7-jRH" secondAttribute="topMargin" id="7mn-hc-eML"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="d3w-5y-Llv" secondAttribute="trailing" constant="14" id="8EI-ou-co1"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="TwG-lh-fCf" secondAttribute="bottom" constant="28" id="ART-HR-L8L"/>
-                                                <constraint firstItem="TwG-lh-fCf" firstAttribute="leading" secondItem="Amf-S7-jRH" secondAttribute="leadingMargin" constant="21" id="KaP-Ud-XEG"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="d3w-5y-Llv" secondAttribute="bottom" constant="31" id="ad8-Ib-Fk9"/>
-                                                <constraint firstItem="TwG-lh-fCf" firstAttribute="top" secondItem="Amf-S7-jRH" secondAttribute="topMargin" constant="3" id="frV-eo-zkr"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
