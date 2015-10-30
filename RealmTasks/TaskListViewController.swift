@@ -12,6 +12,8 @@ import RealmSwift
 class TaskListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     var lists : Results<TaskList>!
+    
+    var isEditingMode = false
 
     var currentCreateAction:UIAlertAction!
     @IBOutlet weak var taskListsTableView: UITableView!
@@ -20,11 +22,6 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -38,7 +35,29 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         self.taskListsTableView.reloadData()
     }
     
-    @IBAction func didClickOnAddButton (sender: UIBarButtonItem){
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // User Actions
+    
+    @IBAction func didClickOnCriteria (sender: UISegmentedControl){
+        if sender.selectedSegmentIndex == 0 {
+            self.lists = self.lists.sorted("name")
+        }
+        else{
+            self.lists = self.lists.sorted("sortedAt", ascending: false)
+        }
+        self.taskListsTableView.reloadData()
+    }
+    
+    @IBAction func didClickOnEditButton (sender: UIBarButtonItem){
+        isEditingMode = !isEditingMode
+        self.taskListsTableView.setEditing(isEditingMode, animated: true)
+    }
+    
+        @IBAction func didClickOnAddButton (sender: UIBarButtonItem){
         displayAlertToAddTaskList(nil)
     }
     
@@ -107,13 +126,14 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         return 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("listCell")
         
         let list = lists[indexPath.row]
         
         cell?.textLabel?.text = list.name
-        cell?.detailTextLabel?.text = "\(list.tasks.count  ) Tasks"
+        cell?.detailTextLabel?.text = "\(list.tasks.count) Tasks"
         return cell!
     }
 
@@ -123,10 +143,12 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
             //Deletion will go here
             
             let listToBeDeleted = self.lists[indexPath.row]
-            try! uiRealm.write({ () -> Void in
-                uiRealm.delete(listToBeDeleted)
-                self.readTasksAndUpdateUI()
-            })
+
+                try! uiRealm.write({ () -> Void in
+                    uiRealm.delete(listToBeDeleted)
+                    self.readTasksAndUpdateUI()
+                })
+
         }
         let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Edit") { (editAction, indexPath) -> Void in
             
@@ -138,6 +160,16 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         return [deleteAction, editAction]
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("openTasks", sender: self.lists[indexPath.row])
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let tasksViewController = segue.destinationViewController as! TasksViewController
+        tasksViewController.selectedList = sender as! TaskList
+    }
 
     /*
     // MARK: - Navigation

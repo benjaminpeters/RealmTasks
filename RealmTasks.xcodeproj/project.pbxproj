@@ -10,6 +10,7 @@
 		401C7DE51BE2A17E003618DC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401C7DE41BE2A17E003618DC /* Task.swift */; };
 		401C7DEB1BE2B167003618DC /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401C7DEA1BE2B167003618DC /* TaskList.swift */; };
 		401C7DEF1BE2BAC7003618DC /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401C7DEE1BE2BAC7003618DC /* TaskListViewController.swift */; };
+		401C7DF11BE3CE79003618DC /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401C7DF01BE3CE79003618DC /* TasksViewController.swift */; };
 		40AB1B0E1BE289D700BAA3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AB1B0D1BE289D700BAA3F8 /* AppDelegate.swift */; };
 		40AB1B101BE289D700BAA3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AB1B0F1BE289D700BAA3F8 /* ViewController.swift */; };
 		40AB1B131BE289D700BAA3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40AB1B111BE289D700BAA3F8 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		401C7DE41BE2A17E003618DC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = SOURCE_ROOT; };
 		401C7DEA1BE2B167003618DC /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		401C7DEE1BE2BAC7003618DC /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		401C7DF01BE3CE79003618DC /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		40AB1B0A1BE289D700BAA3F8 /* RealmTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AB1B0D1BE289D700BAA3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40AB1B0F1BE289D700BAA3F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				40AB1B0D1BE289D700BAA3F8 /* AppDelegate.swift */,
 				40AB1B0F1BE289D700BAA3F8 /* ViewController.swift */,
 				40AB1B111BE289D700BAA3F8 /* Main.storyboard */,
+				401C7DF01BE3CE79003618DC /* TasksViewController.swift */,
 				401C7DEE1BE2BAC7003618DC /* TaskListViewController.swift */,
 				40AB1B141BE289D700BAA3F8 /* Assets.xcassets */,
 				40AB1B161BE289D700BAA3F8 /* LaunchScreen.storyboard */,
@@ -356,6 +359,7 @@
 				401C7DE51BE2A17E003618DC /* Task.swift in Sources */,
 				40AB1B0E1BE289D700BAA3F8 /* AppDelegate.swift in Sources */,
 				401C7DEF1BE2BAC7003618DC /* TaskListViewController.swift in Sources */,
+				401C7DF11BE3CE79003618DC /* TasksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
